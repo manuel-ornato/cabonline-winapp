@@ -41,7 +41,7 @@
 
         public void Send(string subject, string body)
         {
-            var bodyBuilder = new BodyBuilder {HtmlBody = body};
+            var bodyBuilder = new BodyBuilder {HtmlBody = body, TextBody = "Ce message doit être visualisé en HTML"};
             var message =
                 new MimeMessage
                 {
