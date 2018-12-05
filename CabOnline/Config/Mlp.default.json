@@ -1,0 +1,25 @@
+﻿{
+  "#Url": "mmpapp-magstats/mlp/cabs/url",
+  "#DossierRacine": "mmpapp-magstats/mlp/cabs/rootFolder",
+  "Comptes": [
+    {
+      "Editeur": "Esi",
+      "#Identifiant": "mmpapp-magstats/mlp/cabs/accounts/esi/id",
+      "#MotDePasse": "mmpapp-magstats/mlp/cabs/accounts/esi/password",
+      "#Dossier": "mmpapp-magstats/mlp/cabs/accounts/esi/folder"
+    },
+    {
+      "Editeur": "Go",
+      "#Identifiant": "mmpapp-magstats/mlp/cabs/accounts/go/id",
+      "#MotDePasse": "mmpapp-magstats/mlp/cabs/accounts/go/password",
+      "#Dossier": "mmpapp-magstats/mlp/cabs/accounts/go/folder"
+    },
+    {
+      "Editeur": "Cyber",
+      "#Identifiant": "mmpapp-magstats/mlp/cabs/accounts/cyber/id",
+      "#MotDePasse": "mmpapp-magstats/mlp/cabs/accounts/cyber/password",
+      "#Dossier": "mmpapp-magstats/mlp/cabs/accounts/cyber/folder"
+    }
+  ]
+}
+

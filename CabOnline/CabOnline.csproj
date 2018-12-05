@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17026D45-8BEC-488C-AD6A-7BB58D7446A6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CabOnline</RootNamespace>
+    <AssemblyName>CabOnline</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>\\active\informatique\Logiciels\Logiciels maison\CabOnlineV2\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>CabOnline</ProductName>
+    <PublisherName>Multimedia Press</PublisherName>
+    <SuiteName>CabOnline</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>33</ApplicationRevision>
+    <ApplicationVersion>2.12.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>BAEC568898FF378C8973C29D75987EFFAD2E5964</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.StringTemplate, Version=3.4.1.9004, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.StringTemplate.3.4.1.9005\lib\net35\Antlr3.StringTemplate.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.5.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.2.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.2\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Kent.Boogaart.Converters, Version=1.3.1.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kent.Boogaart.Converters.1.3.1\lib\net45\Kent.Boogaart.Converters.dll</HintPath>
+    </Reference>
+    <Reference Include="Kent.Boogaart.HelperTrinity, Version=1.5.2.0, Culture=neutral, PublicKeyToken=cc96fa93a217f7a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kent.Boogaart.HelperTrinity.1.5.2\lib\net45\Kent.Boogaart.HelperTrinity.dll</HintPath>
+    </Reference>
+    <Reference Include="Magick.NET-Q16-AnyCPU, Version=7.9.0.0, Culture=neutral, PublicKeyToken=2004825badfa91ec, processorArchitecture=MSIL">
+      <HintPath>..\packages\Magick.NET-Q16-AnyCPU.7.9.0.2\lib\net40\Magick.NET-Q16-AnyCPU.dll</HintPath>
+    </Reference>
+    <Reference Include="MailKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=4e064fe7c44a8f1b, processorArchitecture=MSIL">
+      <HintPath>..\packages\MailKit.2.1.0.2\lib\net45\MailKit.dll</HintPath>
+    </Reference>
+    <Reference Include="MimeKit, Version=2.1.0.0, Culture=neutral, PublicKeyToken=bede1c8a46c66814, processorArchitecture=MSIL">
+      <HintPath>..\packages\MimeKit.2.1.0\lib\net45\MimeKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Mo.JsonConfiguration, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mo.JsonConfiguration.2.9.1\lib\net461\Mo.JsonConfiguration.dll</HintPath>
+    </Reference>
+    <Reference Include="Mo.SafeEnvironment, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Mo.SafeEnvironment.1.3.0\lib\net45\Mo.SafeEnvironment.dll</HintPath>
+    </Reference>
+    <Reference Include="MvvmFoundation.Wpf">
+      <HintPath>..\packages\MvvmFoundation.Wpf.1.0.0\lib\net40\MvvmFoundation.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.10.8\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data">
+      <HintPath>..\packages\Simple.Data.Core.0.19.0.0\lib\net40\Simple.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data.Ado">
+      <HintPath>..\packages\Simple.Data.Ado.0.19.0.0\lib\net40\Simple.Data.Ado.dll</HintPath>
+    </Reference>
+    <Reference Include="Simple.Data.Mysql">
+      <HintPath>..\packages\Simple.Data.Mysql.0.19.0.5\lib\net40\Simple.Data.Mysql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.IO.Compression, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppSettings\Configuration.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Extensions\Exception\ExceptionExtension.cs" />
+    <Compile Include="Model\Dépôt\BdiEF\DépôtParutionsBdi.cs" />
+    <Compile Include="Model\Dépôt\DbType.cs" />
+    <Compile Include="Model\Dépôt\Mlp\Configuration.cs" />
+    <Compile Include="Model\Dépôt\Nmpp\IDépôtCabNmpp.cs" />
+    <Compile Include="Model\Parution\BdiEF\DistributeurBdi.cs" />
+    <Compile Include="Model\Parution\Generic\QualificationRéseauBase.cs" />
+    <Compile Include="Model\Parution\Generic\PôleBase.cs" />
+    <Compile Include="Model\Parution\Generic\PériodicitéBase.cs" />
+    <Compile Include="Model\Parution\Generic\DistributeurBase.cs" />
+    <Compile Include="Model\Parution\Generic\EditeurBase.cs" />
+    <Compile Include="Model\Parution\BdiEF\EditeurBdi.cs" />
+    <Compile Include="Model\Parution\BdiEF\ParutionBdi.cs" />
+    <Compile Include="Model\Parution\BdiEF\PériodicitéBdi.cs" />
+    <Compile Include="Model\Parution\BdiEF\PôleBdi.cs" />
+    <Compile Include="Model\Parution\BdiEF\QualificationRéseauBdi.cs" />
+    <Compile Include="Operators\IInfosTraitementParution.cs" />
+    <Compile Include="Operators\IOpérateurPrincipal.cs" />
+    <Compile Include="Operators\OpérateurPrincipal.cs" />
+    <Compile Include="Operators\RapportMail\IIGénérateurRapportMail.cs" />
+    <Compile Include="Operators\Tiff\ConvertisseurEpsVersTiff.cs" />
+    <Compile Include="Operators\Mailer\IMailer.cs" />
+    <Compile Include="Operators\Mailer\Mailer.cs" />
+    <Compile Include="Model\ComparateurCabParution\ComparateurCabParution.cs" />
+    <Compile Include="Model\ComparateurCabParution\IComparateurCabParution.cs" />
+    <Compile Include="Model\AnomalieCab\TypeAnomalieCab.cs" />
+    <Compile Include="Model\Dépôt\EtatCabOnline.cs" />
+    <Compile Include="Model\Dépôt\IInfosOpérationDépôt.cs" />
+    <Compile Include="Model\Dépôt\IInfosOpérationDépôtFactory.cs" />
+    <Compile Include="Model\Dépôt\InfosOpérationDépôt.cs" />
+    <Compile Include="Model\Dépôt\InfosOpérationDépôtFactory.cs" />
+    <Compile Include="Model\Dépôt\Mlp\IDépôtCabMlp.cs" />
+    <Compile Include="Model\Dépôt\Pao\IDépôtCabPao.cs" />
+    <Compile Include="Operators\RapportMail\AnomalieCabStAdapter.cs" />
+    <Compile Include="Operators\RapportMail\InfosParutionStAdapter.cs" />
+    <Compile Include="Operators\RapportMail\StRenderers\DateRenderer.cs" />
+    <Compile Include="TaskObserver\Messages\Message.cs" />
+    <Compile Include="TaskObserver\Slice.cs" />
+    <Compile Include="ViewModel\EtatCab.cs" />
+    <Compile Include="TaskObserver\ObserverEventArgs.cs" />
+    <Compile Include="TaskObserver\Progress\ProgressManager.cs" />
+    <Compile Include="TaskObserver\Progress\EnumerableProgressTracker.cs" />
+    <Compile Include="Helpers\Helpers.cs" />
+    <Compile Include="Operators\Tiff\IConvertisseurEpsVersTiff.cs" />
+    <Compile Include="TaskObserver\ITaskObserver.cs" />
+    <Compile Include="TaskObserver\ITaskObserverFactory.cs" />
+    <Compile Include="TaskObserver\Messages\MessageEventArgs.cs" />
+    <Compile Include="TaskObserver\Progress\ProgressEventArgs.cs" />
+    <Compile Include="TaskObserver\Progress\ProgressContext.cs" />
+    <Compile Include="TaskObserver\Messages\MessagingManager.cs" />
+    <Compile Include="TaskObserver\TaskObserver.cs" />
+    <Compile Include="TaskObserver\TaskObserverFactory.cs" />
+    <Compile Include="ViewModel\EtatTâche.cs" />
+    <Compile Include="ViewModel\IAfficheurTâches.cs" />
+    <Compile Include="Operators\IOptionsTéléchargementCabs.cs" />
+    <Compile Include="Operators\IOptionsSélectionParutions.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MessageTâcheViewModel.cs" />
+    <Compile Include="Operators\RapportMail\GénérateurRapportMail.cs" />
+    <Compile Include="ViewModel\TâcheViewModel.cs" />
+    <Compile Include="ViewModel\OptionsViewModel.cs" />
+    <Compile Include="ViewModel\RapportViewModel.cs" />
+    <Compile Include="ViewModel\SélectionViewModel.cs" />
+    <Compile Include="TaskObserver\Messages\MessageLevel.cs" />
+    <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="Views\BusyView.xaml.cs">
+      <DependentUpon>BusyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OptionsView.xaml.cs">
+      <DependentUpon>OptionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RapportView.xaml.cs">
+      <DependentUpon>RapportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SélectionView.xaml.cs">
+      <DependentUpon>SélectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TâcheView.xaml.cs">
+      <DependentUpon>TâcheView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\BusyView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\OptionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RapportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SélectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TâcheView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Cab\Cab.cs" />
+    <Compile Include="Model\Cab\CabFactory.cs" />
+    <Compile Include="Model\Cab\ICab.cs" />
+    <Compile Include="Model\Cab\ICabFactory.cs" />
+    <Compile Include="Model\AnomalieCab\AnomalieCab.cs" />
+    <Compile Include="Model\AnomalieCab\AnomalieCabFactory.cs" />
+    <Compile Include="Model\AnomalieCab\IAnomalieCab.cs" />
+    <Compile Include="Model\AnomalieCab\IAnomalieCabFactory.cs" />
+    <Compile Include="Model\Dépôt\DossierCab\DépôtCabDossierCab.cs" />
+    <Compile Include="Model\Dépôt\DépôtCab.cs" />
+    <Compile Include="Model\Dépôt\DépôtCabOnline.cs" />
+    <Compile Include="Model\Dépôt\IDépôtCab.cs" />
+    <Compile Include="Model\Dépôt\IDépôtParutions.cs" />
+    <Compile Include="Model\Dépôt\Mlp\DépôtCabMlp.cs" />
+    <Compile Include="Model\Dépôt\Nmpp\DépôtCabNmpp.cs" />
+    <Compile Include="Model\Dépôt\Pao\DépôtCabPao.cs" />
+    <Compile Include="Operators\InfosTraitementParution.cs" />
+    <Compile Include="Model\Parution\CalculateurPériodicitéEffective.cs" />
+    <Compile Include="Model\Parution\ICalculateurPériodicitéEffective.cs" />
+    <Compile Include="Model\Parution\ICaractéristiqueScalaire.cs" />
+    <Compile Include="Model\Parution\IDistributeur.cs" />
+    <Compile Include="Model\Parution\IEditeur.cs" />
+    <Compile Include="Model\Parution\IParution.cs" />
+    <Compile Include="Model\Parution\IPériodicité.cs" />
+    <Compile Include="Model\Parution\IPôle.cs" />
+    <Compile Include="Model\Parution\IQualificationRéseau.cs" />
+    <Compile Include="Model\Parution\TypeDistributeur.cs" />
+    <Compile Include="Model\Parution\TypeEditeur.cs" />
+    <Compile Include="Model\Parution\TypePériodicité.cs" />
+    <Compile Include="Model\Parution\TypeQualificationRéseau.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Content Include="GS\gs926w64.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config" />
+    <Content Include="Config\AppSettings.default.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\Mlp.default.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Config\AppSettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <AppDesigner Include="Properties\" />
+    <EmbeddedResource Include="Operators\RapportMail\StViews\RapportMailView.stg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\erreur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\avertissement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\vert.png" />
+    <Resource Include="Assets\rouge.png" />
+    <Resource Include="Assets\jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\coche.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\croix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\incompatible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\nouveau.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\indisponible.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\détail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\obsolète.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon\barcode.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

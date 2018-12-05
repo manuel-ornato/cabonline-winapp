@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="CabOnline.Views.OptionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel>
+            <GroupBox Header="Recherche des Cabs" HorizontalAlignment="Stretch" VerticalAlignment="Top" >
+                <StackPanel>
+                    <CheckBox Content="Sur le site MLP" IsChecked="{Binding ExaminerSiteMlp}"/>
+                    <CheckBox Content="Sur le site NMPP" IsChecked="{Binding ExaminerSiteNmpp}"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Traitement des Cabs téléchargés" HorizontalAlignment="Stretch" VerticalAlignment="Top" >
+                <StackPanel>
+                    <CheckBox Content="Générer une version du Cab au format Tiff" 
+                                       IsChecked="{Binding ConvertirCabVersTiff}"
+                                       IsEnabled="{Binding ConvertirCabVersTiffPossible}"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>

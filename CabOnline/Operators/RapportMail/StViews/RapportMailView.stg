@@ -1,0 +1,116 @@
+group rapportMailView;
+
+body(date,cabsIndisponibles,cabsBloques,cabsIncompatibles,cabsAnormauxAvecAction,cabsAnormaux,cabsTelecharges) ::= <<
+<html>
+<head>
+	<style type="text/css">
+		body {font: 11px verdana; color: #003000}
+		h1 {font-size : 130%; color: purple}
+		h2 {font-size : 110%; color: #000066; font-variant: small-caps}
+		h3 {font-size : 100%; color: #000066; text-decoration: underline}
+		.date {font-weight: bold; color: black; text-decoration: underline}
+		.error {font-weight: bold; color: red }
+		.warning {font-weight: bold; color: #FF9900 }
+	</style>
+</head>
+<body>
+	<p class="date">Rapport Cabs du $date; format="dd/MM/yyyy"$ à $date; format="hh:mm"$</p>
+	<h1>Cab indisponibles</h1>
+		$if(cabsIndisponibles)$
+			$liste(cabs=cabsIndisponibles, template="cabIndisponible")$
+		$else$
+			(Aucun cab indisponible)
+		$endif$
+	<h1>Cab bloqués (non téléchargés car incompatibles)</h1>
+		$if(cabsBloques)$
+			$liste(cabs=cabsBloques, template="cabBloque")$
+		$else$
+			(Aucun cab bloqué)
+		$endif$
+	<h1>Cab incompatibles (présents dans Pao mais ne correpondant pas au planning)</h1>
+		$if(cabsIncompatibles)$
+			$liste(cabs=cabsIncompatibles, template="cabPresent")$
+		$else$
+			(Aucun cab bloqué)
+		$endif$
+	<h1>Cab anormaux nécessitant une intervention</h1>
+		$if(cabsAnormauxAvecAction)$
+			$liste(cabs=cabsAnormauxAvecAction, template="cabPresent")$
+		$else$
+			(Aucun cab anormal nécessitant une intervention)
+		$endif$
+	<h1>Cab anormaux</h1>
+		$if(cabsAnormaux)$
+			$liste(cabs=cabsAnormaux, template="cabPresent")$
+		$else$
+			(Aucun cab anormal)
+		$endif$
+	<h1>Nouveaux Cab téléchargés</h1>
+		$if(cabsTelecharges)$
+			$liste(cabs=cabsTelecharges, template="cabTelecharge")$
+		$else$
+			(Aucun cab téléchargé)
+		$endif$
+</body>
+>>
+
+liste(cabs, template) ::= <<
+<ul>
+	$cabs:(template)():listitem(); separator="\n"$
+</ul>
+>>
+
+listitem() ::= "<li>$it$</li>"
+
+cabIndisponible() ::= <<
+$it:commun()$
+>>
+
+cabBloque() ::= <<
+$it:commun()$
+<ul>
+	$it.AnomaliesOnline:anomalie():listitem(); separator="\n"$
+</ul>
+>>
+
+cabPresent() ::= <<
+$it:commun()$$it.Url:fieldValue():withSeparator()$
+<ul>
+	$it.Anomalies:anomalie():listitem(); separator="\n"$
+</ul>
+>>
+
+cabTelecharge() ::= <<
+$it:commun()$$it.UrlOnline:fieldValue():withSeparator()$ =&gt; $it.Url:fieldValue()$
+<ul>
+	$it.Anomalies:anomalie():listitem(); separator="\n"$
+</ul>
+>>
+
+anomalie() ::= <<
+$if(it.EstIncompatible)$
+	$it:error()$
+$elseif(it.NecessiteAction)$
+	$it:error()$
+$else$
+	$it:warning()$
+$endif$
+>>
+
+commun() ::= <<
+$it.DateDhl; format="dd/MM/yyyy":fieldValue()$$it.CodeProduit:fieldValue():bold():withSeparator()$$it:infosCab():fieldValue():withSeparator()$$it.TitreEtNumero:fieldValue():withSeparator()$
+>>
+
+infosCab() ::= <<
+$it.Editeur$:$it.Distributeur$:$it.Codif$
+>>
+
+error() ::= "<span class=\"error\">$it$</span>"
+
+warning() ::= "<span class=\"warning\">$it$</span>"
+
+bold() ::= "<b>$it$</b>"
+
+fieldValue() ::= "[$it$]"
+
+withSeparator() ::= " - $it$"

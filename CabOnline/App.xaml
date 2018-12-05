@@ -1,0 +1,27 @@
+﻿<Application x:Class="CabOnline.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:Converters="clr-namespace:CabOnline.Converters">
+    <Application.Resources>
+        <!-- Converters -->
+        <Converters:BoolToVisibilityConverter x:Key="_collapsedIfFalse" TrueValue="Visible" FalseValue="Collapsed"/>
+        <Converters:BoolToVisibilityConverter x:Key="_hiddenIfFalse" TrueValue="Visible" FalseValue="Hidden"/>
+        <Converters:BoolToVisibilityConverter x:Key="_hiddenIfTrue" TrueValue="Hidden" FalseValue="Visible"/>
+        <!-- Icons -->
+        <BitmapImage x:Key="_logoDétail" UriSource="/CabOnline;component/Assets/détail.png" />
+        <BitmapImage x:Key="_logoInformation" UriSource="/CabOnline;component/Assets/information.png" />
+        <BitmapImage x:Key="_logoAvertissement" UriSource="/CabOnline;component/Assets/avertissement.png" />
+        <BitmapImage x:Key="_logoErreur" UriSource="/CabOnline;component/Assets/erreur.png" />
+        <BitmapImage x:Key="_logoVert" UriSource="/CabOnline;component/Assets/vert.png" />
+        <BitmapImage x:Key="_logoJaune" UriSource="/CabOnline;component/Assets/jaune.png" />
+        <BitmapImage x:Key="_logoOrange" UriSource="/CabOnline;component/Assets/orange.png" />
+        <BitmapImage x:Key="_logoRouge" UriSource="/CabOnline;component/Assets/rouge.png" />
+        <BitmapImage x:Key="_logoCoche" UriSource="/CabOnline;component/Assets/coche.png" />
+        <BitmapImage x:Key="_logoCroix" UriSource="/CabOnline;component/Assets/croix.png" />
+        <BitmapImage x:Key="_logoPlay" UriSource="/CabOnline;component/Assets/play.png" />
+        <BitmapImage x:Key="_logoStop" UriSource="/CabOnline;component/Assets/stop.png" />
+        <BitmapImage x:Key="_logoNouveau" UriSource="/CabOnline;component/Assets/nouveau.png" />
+        <BitmapImage x:Key="_logoObsolète" UriSource="/CabOnline;component/Assets/obsolète.png" />
+        <BitmapImage x:Key="_logoIncompatible" UriSource="/CabOnline;component/Assets/incompatible.png" />
+        <BitmapImage x:Key="_logoIndisponible" UriSource="/CabOnline;component/Assets/indisponible.png" />
+    </Application.Resources>
+</Application>

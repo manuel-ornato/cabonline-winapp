@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="CabOnline.Views.SélectionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             d:DesignHeight="410"
+             d:DesignWidth="300"
+             mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <GroupBox Header="Date DHL">
+                <StackPanel>
+                    <CheckBox Content="Filtrer selon la date DHL" IsChecked="{Binding FiltrerParDate}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0"
+                               Grid.Column="0"
+                               Content="DHL min. :" />
+                        <DatePicker Grid.Row="0"
+                                    Grid.Column="1"
+                                    MinWidth="100"
+                                    IsEnabled="{Binding FiltrerParDate}"
+                                    SelectedDate="{Binding DateDébut}" />
+                        <Label Grid.Row="1"
+                               Grid.Column="0"
+                               Content="DHL max. :" />
+                        <DatePicker Grid.Row="1"
+                                    Grid.Column="1"
+                                    MinWidth="100"
+                                    IsEnabled="{Binding FiltrerParDate}"
+                                    SelectedDate="{Binding DateFin}" />
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Pôle">
+                <StackPanel>
+                    <CheckBox Content="Filtrer par pôle" IsChecked="{Binding FiltrerParPôle}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Pôle :" />
+                        <ComboBox Grid.Column="1"
+                                  DisplayMemberPath="LibelléLong"
+                                  IsEnabled="{Binding FiltrerParPôle}"
+                                  ItemsSource="{Binding Pôles}"
+                                  SelectedValue="{Binding Pôle}" />
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Code Interne">
+                <StackPanel>
+                    <CheckBox Content="Filtrer par code interne" IsChecked="{Binding FiltrerParCodeInterne}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="2*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Code interne :" />
+                        <TextBox Grid.Column="1"
+                                 IsEnabled="{Binding FiltrerParCodeInterne}"
+                                 MaxLength="5"
+                                 Text="{Binding CodeInterne}" />
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Numéro">
+                <StackPanel>
+                    <CheckBox Content="Filtrer par numéro" IsChecked="{Binding FiltrerParNuméro}" />
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="Numéro :" />
+                        <TextBox Grid.Column="1"
+                                 IsEnabled="{Binding FiltrerParNuméro}"
+                                 MaxLength="3"
+                                 Text="{Binding Numéro}" />
+                    </Grid>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+    </Grid>
+</UserControl>
